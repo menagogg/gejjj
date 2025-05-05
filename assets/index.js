@@ -228,6 +228,12 @@ document.querySelector(".go").addEventListener('click', () => {
 
     if (empty.length != 0){
         empty[0].scrollIntoView();
+        if (empty.length === 0) {
+    const konto = {
+        obrazek: imageInput.value
+    };
+    localStorage.setItem("konto", JSON.stringify(konto));
+}
     }else{
         forwardToId(params);
     }
