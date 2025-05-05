@@ -1,8 +1,8 @@
 var params = new URLSearchParams(window.location.search);
 // Odzyskaj obraz z localStorage jeśli istnieje
-const savedImage = localStorage.getItem('userImage');
-if (savedImage) {
-    params.set('image', savedImage);
+const konto = JSON.parse(localStorage.getItem("konto"));
+if (konto && konto.obrazek) {
+    document.getElementById("avatarImg").src = konto.obrazek;
 }
 
 document.querySelector(".login").addEventListener('click', () => {
