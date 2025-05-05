@@ -92,7 +92,7 @@ const closePreview = document.querySelector('.close-preview');
 
 input.addEventListener('input', (event) => {
     const imgurUrl = event.target.value;
-    if (imgurUrl.includes('imgur.com')) {
+    if (imgurUrl.includes('cdn.discordapp.com')) {
         // Clear previous image from localStorage
         localStorage.removeItem('userImage');
         input.setAttribute("selected", imgurUrl);
